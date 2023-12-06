@@ -6,7 +6,7 @@
 /*   By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 14:38:24 by gcavanna          #+#    #+#             */
-/*   Updated: 2023/12/05 17:41:52 by gcavanna         ###   ########.fr       */
+/*   Updated: 2023/12/06 09:14:19 by gcavanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FIXED_HPP
 
 #include <iostream>
+#include <cmath>
 
 class Fixed
 {

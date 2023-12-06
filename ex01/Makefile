@@ -6,11 +6,11 @@
 #    By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 13:50:09 by gcavanna          #+#    #+#              #
-#    Updated: 2023/12/05 17:30:53 by gcavanna         ###   ########.fr        #
+#    Updated: 2023/12/06 09:22:59 by gcavanna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixed
+NAME = Fixed01
 
 SRC = main.cpp Fixed.cpp
 CC = c++
