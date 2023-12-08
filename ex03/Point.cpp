@@ -1,39 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Point.hpp                                          :+:      :+:    :+:   */
+/*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 17:41:47 by gcavanna          #+#    #+#             */
-/*   Updated: 2023/12/08 18:29:24 by gcavanna         ###   ########.fr       */
+/*   Updated: 2023/12/08 18:28:18 by gcavanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POINT_HPP
-# define POINT_HPP
+#include "Point.hpp"
 
-#include "Fixed.hpp"
+Point::Point(void) : _x(0), _y(0) 
+{ 
+}
 
-class Point
+Point::Point(Fixed x, Fixed y) : _x(x), _y(y)
+{ 
+}
+
+Point::Point(const Point& src)
 {
-	private:
-		const Fixed	_x;
-		const Fixed _y;
+    *this = src; 
+}
 
-	public:
-		Point(void);
-		Point(Fixed x, Fixed y);
-		Point(const Point& src);
-		~Point(void);
+Point::~Point(void)
+{
+}
 
-		Point& operator=(const Point& rhs);
-		Point  operator-(const Point& other) const;
+Point&	Point::operator=(const Point& rhs)
+{
+	if (this != &rhs)
+	{
+		const_cast<Fixed&>(_x) = rhs.getX();
+		const_cast<Fixed&>(_y) = rhs.getY();
+	}
+	return *this;
+}
 
-		Fixed getX() const;
-		Fixed getY() const;
-};
+Point Point::operator-(const Point& other) const 
+{
+    return Point(_x - other.getX(), _y - other.getY());
+}
 
-bool bsp( Point const a, Point const b, Point const c, Point const point);
+Fixed Point::getX() const
+{
+    return _x;
+}
 
-#endif
+Fixed Point::getY() const
+{
+    return _y;
+}

@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gcavanna <gcavanna@student.42.fr>          +#+  +:+       +#+         #
+#    By: gcavanna <gcavanna@student.42firenze.it    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 13:50:09 by gcavanna          #+#    #+#              #
-#    Updated: 2023/12/06 17:05:41 by gcavanna         ###   ########.fr        #
+#    Updated: 2023/12/08 18:22:25 by gcavanna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixed02
+NAME = bsp03
 
-SRC = main.cpp Fixed.cpp
+SRC = main.cpp Fixed.cpp bsp.cpp Point.cpp
 CC = c++
 FLAGS = -g -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
